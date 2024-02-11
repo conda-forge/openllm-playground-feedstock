@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openllm-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/openllm/openllm-{{ version }}.tar.gz
   sha256: cd2850a6c46b8f801325265a8b7e91ee193a8acfb848deccb7efc6273ee91895
 
 build:
@@ -30,7 +30,7 @@ requirements:
     - hatch-vcs ==0.3.0
     - hatch-fancy-pypi-readme ==23.1.0
     - pip
-    - openllm {{ version }}
+    - openllm =={{ version }}
   run:
     - python
     - openllm =={{ version }}
@@ -64,3 +64,6 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - conda-forge/openllm-client
+    - conda-forge/openllm-core
+    - conda-forge/openllm
