@@ -30,7 +30,7 @@ requirements:
     - hatch-vcs ==0.3.0
     - hatch-fancy-pypi-readme ==23.1.0
     - pip
-    - openllm {{ version }}
+    - openllm =={{ version }}
   run:
     - python
     - openllm =={{ version }}
@@ -64,3 +64,6 @@ about:
 extra:
   recipe-maintainers:
     - rxm7706
+    - conda-forge/openllm-client
+    - conda-forge/openllm-core
+    - conda-forge/openllm
